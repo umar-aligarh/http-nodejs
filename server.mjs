@@ -1,6 +1,8 @@
-import { createServer } from 'http';
+const express = require("express");
+const app = express();
+let port = "3000"
 
-createServer((req, res) => {
-  res.write('Hello World!');
-  res.end();
-}).listen(process.env.PORT);
+app.get("/",(req,res)=>{
+     return res.send('hi");
+})
+app.listen(port, () => console.log("Server started on port 3000"));
